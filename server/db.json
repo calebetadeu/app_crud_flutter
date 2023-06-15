@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "email": "ricarth2@gmail.com",
+      "password": "$2a$10$qkQBfNuDU70scRPV5XBbs.H3M7SlwiusMBc5SjBVgzps1lxJMNg/y",
+      "id": 1
+    },
+    {
+      "email": "calebetadeu@gmail.com",
+      "password": "$2a$10$eaXIFHAMMBbrFEVZQ/l4auE0dIk131in3A2JcAQcBer7I5fScQf0S",
+      "id": 2
+    }
+  ],
   "learnhttp": {},
   "journals": [
     {
