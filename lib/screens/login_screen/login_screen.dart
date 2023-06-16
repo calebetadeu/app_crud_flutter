@@ -79,7 +79,12 @@ class _LoginScreenState extends State<LoginScreen> {
     String password = _passController.text;
 
     try {
-      bool result = await service.login(email: email, password: password);
+       service.login(email: email, password: password).then((resultLogin){
+         if(resultLogin){
+           Navigator.pushReplacementNamed(context, "home");
+         }
+         
+       });
     } on UserNotFindException {
       showConfirmationDialog(context,
           content:
@@ -89,7 +94,11 @@ class _LoginScreenState extends State<LoginScreen> {
               service.register(
                 email: email,
                 password: password
-              );
+              ).then((resultRegister) {
+                if(resultRegister){
+                  Navigator.pushReplacementNamed(context, "home");
+                }
+              });
             }
       } );
     }
